@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SynthContainer from '../containers/SynthContainers'
-const unmuteAudio = require('unmute-ios-audio')
+import SynthContainer from '../containers/SynthContainer'
 
-document.addEventListener('DomContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const body = document.body
-  const props = JSON.parse(body.dataset.props)
-  const audioContext = new (window.AudioContext || window.webkitAudioContext)()
+  console.log('hey');
 
   ReactDOM.render(
-    <SynthContainer oscillators={props} audioContext={audioContext} />,
+    <SynthContainer />,
     body.appendChild(document.createElement('div'))
   )
 })
